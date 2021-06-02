@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=j5pit2PEv9helkCQvAgZNzsEgKHrL8E_SBWgEfzBiaP0CaEph1Rmq7QIc6ffmnKShZiXZIeaq-JDE0gz6WiVleAc2zlmf7Xd0wiqvRRokwo8p6IBNJ3GLieOP2Yc2MHlZJ1euFzN1ZLnFP9jwZSul7oBwx5f4WkgBcpXS5ivoBxudO-a6qJo_i6-piT1Te-ZhON33mro7ujl3vBWb7803MlCeWyMmG_a1oy5_ntwxrBclloGa2CAOsCzCwZeotOuvrNR64xrIi9i0Gjn-HGs1-AovrxYCGZvtmMpKlLXsdgAW_NxNRNle8DnFIcfrq95Yn8zfDbr8AMbMJEQMWi4M69MJ3wumjR4DcoaFrb8mfy4xeeQ_KGv06nr9tsPcGhc7rAlwSL0EjBaZWwjf-KY7MBr2u1rYGrKX93POrjPFu1tb7LxygR2V4WymUIBbHNgFiMtQjT27SgH3CCYQ3DgS01zLqxJdNHIxRfkE80Gw2q3PXwuyx9m91njhSY1aHN0mM8ln5o0z737_PHO0hAnbhWzMbOelI_E6XOWfDXgyMy8Y51LtgiIHSW2nBSWMKJ_bf-ejmF_pZQQgf2ciJmEVBc8I2-il3sL-jIySrIQ2J_yFPdMH58D6tSGTXmDXZDt5ExoXOtGa8NT6iJgLAkT9IXoVcwbrh75LVec0Te2bzFYQ45oJkdJbmvVx5wcWZtibkF5MHsuzgB_SArm-Oyp8Iipig9ceO2l0YQLk2qNIKEO6PD-bGAAENMWrP7ZzFdoIeGcVk9fKuffd20gFPBFIsN6dJevAp-5s_INjhhQOR05eNHUexkR6NamjVSZ1Stk21XP-h4cdFzLWftH9R1qVwa9Sv7KpThfbGX32YirwN2CXWJQjILYNTlAS9l49tx2PF_evm1avh0Wv9qKm35axc_fuO5HxYy-ynlFYyhiIdpg_8EVZVqhSPY5PYuVZcdCx64QZwKW-3fx2zrOC8OJptyEYaNrM3ul5a0DHXyqrCIGk15V2aeK9H2lF6VfnPo7-t5aqDv9EUF31MYrBORt9yfApuLjHO5eGz1NsmQx_1Z85QeLhza6MEf0UHInpSatSbSFzBvk7AhUrg-Cgc5uJisIywyJl1kSJHvrIJQgJBmvdGqehaqioTkHCzIE8wnvepo44fBcY5xb1p7DcQVqHA" nonce="0e07de8d87e69477e558ad4755936296" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9tYWlsLWF0dGFjaG1lbnQuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2F0dGFjaG1lbnQvdS8wLz91aT0yJmlrPTUzZTM3ODRmODAmYXR0aWQ9MC4xJnBlcm1tc2dpZD1tc2ctYTpyNDUzNzY0Nzk5NTIxMTYwNDU3NyZ2aWV3PWF0dCZkaXNwPXNhZmUmcmVhbGF0dGlkPWZfa3BmaTcyYTYwJnNhZGRiYXQ9QU5HamRKOW1EeXpSbEk4NWJPN1dXb0ozeENfMHktTnY3SHVtbTlaUFZzbDVFTDl0dEN3dy1PSVZGcVVlbzdBVjc1WFNiUHdBaXBSeXUxdjI5QjBId3k0aEs2aGhIb1UwVTlNaDM4djB1cEFHbVk5Z1pCYUdORGQ1TkotVnUyQTkwbzRKNWUyblB0VzdCZVdEZURhbzBGNUY4RmU5Sjl6SkpReEk2dEhKRDJWNS05SndqSVNmU243NnUwUUVyUUdnUE5oM2FYZDJGMlZUSEQ1anctVVdDZFBkXzlJTVBUMEVmWjF3YTJBUHV1Q0tRbENHRHFlWC0zdk9Ed2tmVlZscGQ5ak0zUXNHbEVGdkhiZ3RLaFdUTzRMd0twcXdaVndSNmwwMmpMOUhhTm0wTFVFSDRJMGI1YnFHQmdHaGhFeUlYZHpNOGhyYV9oNnhMQlRoZTJWQkE2bl9mYnFCQUpVRlBsQmtkQWN1VWlEUTB3VFBCYWFiSkMzRkh3RUZGUnZPenBvTmJ0RTYzeGppeHBiZXNHZ0hmYVJudEhadEU3dGpCNU16WTBScU9fQVdqN25PTkxzZW5ZSFRkUFJGMmktNjl4Rlo3em5IWkFLX2ZYenZ2NEc2X3ItUmRRYTRpYTZvNzBBYWl6bnpkV19iUlVYeEp5ZEhUV29DMENyWjhuT2pCTWdYYjNWU0NsRlF3OUZwLTdlUWxkOExWVGY0MWVuYkFEMHVHZksybm1Wdkh0eDVyU2U4U1g4YlBrdEt0M283Q0xGNUFGdWt2c09RdUtNdnZWNXdIUjc4dlB5LW5sTG5mb3hvQ2N1QnE2cG1nQ3ozdG9jRjdzTkR1c05sVzE4eUJxaU5QU2Y4dXY4bGhLcHFsMGZtdlNpNlM1anE1WUlFdkZ2bXpYWHcyQQ"/><script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <style>
+        /*#section-1 {
+            height: 1080px;
+        }
+        
+        #section-2 {
+            height: 1080px;
+        }
+        
+        #section-3 {
+            height: 1080px;
+        }*/
+        
+        #section-4 {
+            background-image: url("https://azmind.com/demo/bootstrap-carousel-fullscreen/full-width/assets/img/slides/slide-img-1.jpg");
+            height: 1080px;
+        }
+        
+        .top-content {
+            width: 100%;
+            padding: 0;
+        }
+        
+        .top-content .carousel-control-prev {
+            border-bottom: 0;
+        }
+        
+        .top-content .carousel-control-next {
+            border-bottom: 0;
+        }
+        
+        .top-content .carousel-caption {
+            padding-bottom: 60px;
+        }
+        
+        .top-content .carousel-caption h1 {
+            padding-top: 60px;
+            color: #fff;
+        }
+        
+        .top-content .carousel-caption h3 {
+            color: #fff;
+        }
+        
+        .top-content .carousel-caption .carousel-caption-description {
+            color: #fff;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .top-content .carousel-indicators li {
+            width: 16px;
+            height: 16px;
+            margin-left: 5px;
+            margin-right: 5px;
+            border-radius: 50%;
+        }
+        
+        .top-content .carousel-item {
+            height: 100vh;
+            min-height: 400px;
+        }
+        
+        .top-content .carousel-item img {
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        @media (max-width: 767px) {
+            h1,
+            h2 {
+                font-size: 22px;
+                line-height: 30px;
+            }
+            .top-content .carousel-caption {
+                bottom: 20px;
+            }
+            .top-content .carousel-indicators {
+                display: none;
+            }
+        }
+        
+        media (max-width: 575px) {
+            .top-content .carousel-caption {
+                bottom: 0;
+                padding-bottom: 20px;
+            }
+            .top-content .carousel-caption-description {
+                display: none;
+            }
+            .top-content h1,
+            .top-content h2,
+            .top-content h3 {
+                font-size: 18px;
+            }
+            .top-content .carousel-item {
+                max-height: 400px;
+            }
+        }
+        /*
+        *another css
+        */
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            color: #888;
+            line-height: 30px;
+            text-align: center;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        a {
+            color: #a365bc;
+            border-bottom: 1px dashed #a365bc;
+            text-decoration: none;
+            transition: all .3s;
+        }
+        
+        a:hover,
+        a:focus {
+            color: #a365bc;
+            border: 0;
+            text-decoration: none;
+        }
+        
+        h1,
+        h2 {
+            margin-top: 10px;
+            font-size: 38px;
+            font-weight: 300;
+            color: #555;
+            line-height: 50px;
+            font-style: italic;
+        }
+        
+        h3 {
+            font-size: 22px;
+            font-weight: 300;
+            color: #555;
+            line-height: 30px;
+            font-style: italic;
+        }
+        
+        img {
+            max-width: 100%;
+        }
+        
+        .medium-paragraph {
+            font-size: 17px;
+            line-height: 32px;
+        }
+        
+         ::-moz-selection {
+            background: #8542a0;
+            color: #fff;
+            text-shadow: none;
+        }
+        
+         ::selection {
+            background: #8542a0;
+            color: #fff;
+            text-shadow: none;
+        }
+        /***** General style, all sections *****/
+        
+        .section-container {
+            margin: 0 auto;
+            padding-bottom: 80px;
+        }
+        
+        .section-container-gray-bg {
+            background: #f8f8f8;
+        }
+        
+        .section-container-image-bg,
+        .section-container-image-bg h2,
+        .section-container-image-bg h3 {
+            color: #fff;
+        }
+        
+        .section-container-image-bg .divider-1 span {
+            border-color: #fff;
+        }
+        
+        .section-description {
+            margin-top: 60px;
+            padding-bottom: 10px;
+        }
+        
+        .section-description p {
+            margin-top: 20px;
+            padding: 0 120px;
+        }
+        
+        .section-container-image-bg .section-description p {
+            opacity: 0.8;
+        }
+        
+        .section-bottom-button {
+            padding-top: 60px;
+        }
+        /***** Divider *****/
+        
+        .divider-1 span {
+            display: inline-block;
+            width: 200px;
+            border-bottom: 1px dotted #aaa;
+        }
+        /***** Top menu *****/
+        
+        .navbar {
+            background: #444;
+            transition: all .6s;
+            backface-visibility: hidden;
+        }
+        
+        .navbar.navbar-no-bg {
+            background: #444;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        
+        .navbar-dark .navbar-nav {
+            font-size: 15px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        
+        .navbar-dark .navbar-nav .nav-link {
+            color: #fff;
+            color: rgba(255, 255, 255, 0.8);
+            border: 0;
+        }
+        
+        .navbar-dark .navbar-nav .nav-link:hover {
+            color: #fff;
+        }
+        
+        .navbar-dark .navbar-nav .nav-link:focus {
+            color: #fff;
+            outline: 0;
+        }
+        
+        .navbar-expand-md .navbar-nav .nav-link {
+            padding-right: 1rem;
+            padding-left: 1rem;
+        }
+        
+        .navbar-brand {
+            width: 123px;
+            background: url(../img/logo.png) left center no-repeat;
+            border: 0;
+            text-indent: -99999px;
+        }
+        /***** Top content *****/
+        
+        .top-content {
+            width: 100%;
+            padding: 0;
+        }
+        
+        .top-content .carousel-control-prev {
+            border-bottom: 0;
+        }
+        
+        .top-content .carousel-control-next {
+            border-bottom: 0;
+        }
+        
+        .top-content .carousel-caption {
+            padding-bottom: 60px;
+        }
+        
+        .top-content .carousel-caption h1 {
+            padding-top: 60px;
+            color: #fff;
+        }
+        
+        .top-content .carousel-caption h3 {
+            color: #fff;
+        }
+        
+        .top-content .carousel-caption .carousel-caption-description {
+            color: #fff;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .top-content .carousel-indicators li {
+            width: 16px;
+            height: 16px;
+            margin-left: 5px;
+            margin-right: 5px;
+            border-radius: 50%;
+        }
+        /***** Section 1 *****/
+        
+        .section-1-box {
+            padding-top: 30px;
+            text-align: left;
+        }
+        
+        .section-1-box .section-1-box-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+            background: #8542a0;
+            /* Old browsers */
+            background: -moz-linear-gradient(top, #a365bc 0%, #8542a0 100%);
+            /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a365bc), color-stop(100%, #8542a0));
+            /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #a365bc 0%, #8542a0 100%);
+            /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #a365bc 0%, #8542a0 100%);
+            /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #a365bc 0%, #8542a0 100%);
+            /* IE10+ */
+            background: linear-gradient(to bottom, #a365bc 0%, #8542a0 100%);
+            /* W3C */
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#a365bc', endColorstr='#8542a0', GradientType=0);
+            /* IE6-9 */
+            font-size: 40px;
+            color: #fff;
+            line-height: 80px;
+            text-align: center;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            -o-transition: all .6s;
+            -moz-transition: all .6s;
+            -webkit-transition: all .6s;
+            -ms-transition: all .6s;
+            transition: all .6s;
+        }
+        
+        .section-1-box h3 {
+            margin-top: 0;
+            padding: 0 0 10px 0;
+        }
+        /***** Section 2 *****/
+        
+        .section-2-box {
+            margin-top: 30px;
+            text-align: left;
+        }
+        
+        .section-2-box h3 {
+            margin-top: 0;
+        }
+        
+        .section-2-box-text .medium-paragraph {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        /***** Section 3 *****/
+        
+        .section-3-box {
+            margin-top: 30px;
+            text-align: left;
+        }
+        
+        .section-3-box .section-3-box-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto;
+            background: #8542a0;
+            /* Old browsers */
+            background: -moz-linear-gradient(top, #a365bc 0%, #8542a0 100%);
+            /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a365bc), color-stop(100%, #8542a0));
+            /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #a365bc 0%, #8542a0 100%);
+            /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #a365bc 0%, #8542a0 100%);
+            /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #a365bc 0%, #8542a0 100%);
+            /* IE10+ */
+            background: linear-gradient(to bottom, #a365bc 0%, #8542a0 100%);
+            /* W3C */
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#a365bc', endColorstr='#8542a0', GradientType=0);
+            /* IE6-9 */
+            font-size: 28px;
+            color: #fff;
+            line-height: 60px;
+            text-align: center;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+        }
+        
+        .section-3-box h3 {
+            margin-top: 0;
+            padding: 0 0 10px 0;
+        }
+        /***** Footer *****/
+        
+        footer {
+            padding: 40px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Top menu -->
+    <nav class="navbar navbar-dark fixed-top navbar-expand-md navbar-no-bg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Bootstrap 4 Carousel Fullscreen Template</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			        <span class="navbar-toggler-icon"></span>
+			    </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link scroll-link" href="#top-content">Top</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scroll-link" href="#section-1">Item 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scroll-link" href="#section-2">Item 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scroll-link" href="#section-3">Item 3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scroll-link" href="#section-4">Item 4</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Top content -->
+    <div id="top-content" class="top-content">
+        <!-- Carousel -->
+        <div id="carousel-example" class="carousel slide" data-ride="carousel">
+
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example" data-slide-to="1"></li>
+                <li data-target="#carousel-example" data-slide-to="2"></li>
+                <li data-target="#carousel-example" data-slide-to="3"></li>
+            </ol>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://azmind.com/demo/bootstrap-carousel-fullscreen/full-width/assets/img/slides/slide-img-1.jpg" class="d-block w-100" alt="slide-img-1">
+                    <div class="carousel-caption">
+                        <h1>Carousel Fullscreen Template</h1>
+                        <div class="carousel-caption-description">
+                            <p>This is a free Fullscreen Carousel template made with the Bootstrap 4 framework.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://azmind.com/demo/bootstrap-carousel-fullscreen/full-width/assets/img/slides/slide-img-2.jpg" class="d-block w-100" alt="slide-img-2">
+                    <div class="carousel-caption">
+                        <h3>Caption for Image 2</h3>
+                        <div class="carousel-caption-description">
+                            <p>This is the caption description text for image 2.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://azmind.com/demo/bootstrap-carousel-fullscreen/full-width/assets/img/slides/slide-img-3.jpg" class="d-block w-100" alt="slide-img-3">
+                    <div class="carousel-caption">
+                        <h3>Caption for Image 3</h3>
+                        <div class="carousel-caption-description">
+                            <p>This is the caption description text for image 3.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://azmind.com/demo/bootstrap-carousel-fullscreen/full-width/assets/img/slides/slide-img-4.jpg" class="d-block w-100" alt="slide-img-4">
+                    <div class="carousel-caption">
+                        <h3>Caption for Image 4</h3>
+                        <div class="carousel-caption-description">
+                            <p>This is the caption description text for image 4.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#carousel-example" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-example" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <!-- End carousel -->
+
+        <!-- Section 1 -->
+        <div id="section-1" class="section-1-container section-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col section-1 section-description wow fadeIn">
+                        <h2>Section 1</h2>
+                        <div class="divider-1 wow fadeInUp"><span></span></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 section-1-box wow fadeInUp">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="section-1-box-icon">
+                                    <i class="fas fa-magic"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <h3>Branding</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 section-1-box wow fadeInDown">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="section-1-box-icon">
+                                    <i class="fas fa-cog"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <h3>Web design</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 section-1-box wow fadeInUp">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="section-1-box-icon">
+                                    <i class="fab fa-twitter"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <h3>Social media</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div id="section-2" class="section-2-container section-container section-container-gray-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col section-2 section-description wow fadeIn">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col section-2-box wow fadeInLeft">
+                        <h3>Section 2</h3>
+                        <p class="medium-paragraph">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud. Exerci tation ullamcorper suscipit <a href="#">lobortis nisl</a> ut aliquip
+                            ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud. Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3 -->
+        <div id="section-3" class="section-3-container section-container">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col section-3 section-description wow fadeIn">
+                        <h2>Section 3</h2>
+                        <div class="divider-1 wow fadeInUp"><span></span></div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 section-3-box wow fadeInLeft">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="section-3-box-icon">
+                                    <i class="fas fa-paperclip"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <h3>Ut wisi enim ad minim</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 section-3-box wow fadeInLeft">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="section-3-box-icon">
+                                    <i class="fas fa-pencil-alt"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <h3>Sed do eiusmod tempor</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 section-3-box wow fadeInLeft">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="section-3-box-icon">
+                                    <i class="fas fa-cloud"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <h3>Quis nostrud exerci tat</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 section-3-box wow fadeInLeft">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="section-3-box-icon">
+                                    <i class="fab fa-google"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <h3>Minim veniam quis nostrud</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. Ut wisi enim ad minim veniam, quis nostrud.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Section 4 -->
+        <div id="section-4" class="section-4-container section-container section-container-image-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col section-4 section-description wow fadeInLeftBig">
+                        <h2>Section 4</h2>
+                        <p>
+                            Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer-container">
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="col">
+                        &copy; Bootstrap 4 Fullscreen Carousel Template. Download it for free on <a href="https://azmind.com">AZMIND</a>.
+                    </div>
+
+                </div>
+            </div>
+
+        </footer>
+    </div>
+</body>
+
+</html>
